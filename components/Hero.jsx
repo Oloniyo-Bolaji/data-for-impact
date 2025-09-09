@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-b from-white to-faintblue">
+    <section id="top" className="bg-gradient-to-b from-white to-faintblue">
       {/* Hero Content */}
       <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 items-center gap-10 sm:px-10 px-5 py-16">
         {/* Left */}
@@ -25,14 +25,14 @@ const Hero = () => {
               aria-label="Contact Us"
               className="bg-blue text-white px-6 py-3 rounded-full font-medium text-sm hover:bg-lightblue transition"
             >
-              Let’s Talk
+              Contact Us
             </Link>
             <Link
-              href="/projects"
+              href="/expertise"
               aria-label="Take a look at our projects"
               className="border border-gray-400 px-6 py-3 rounded-full font-medium text-sm text-gray-700 hover:bg-gray-100 transition"
             >
-              View Projects
+              Our Services
             </Link>
           </div>
         </div>

@@ -1,9 +1,9 @@
 import dynamic from "next/dynamic";
 import "./globals.css";
 import localFont from "next/font/local";
+import Footer from "@/components/Footer";
 const Navbar = dynamic(() => import("@/components/Navbar"));
 //const Footer = dynamic(() => import("@/components/Footer"));
-
 
 const montserrat = localFont({
   src: [
@@ -37,6 +37,7 @@ export default function RootLayout({ children }) {
       <body className={`${montserrat.className}`}>
         <Navbar />
         <div className="mt-[70px]">{children}</div>
+        <Footer />
       </body>
     </html>
   );

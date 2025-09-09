@@ -32,17 +32,23 @@ const FAQs = () => {
             return (
               <div key={faq.id} className="w-full flex flex-col py-2">
                 <div className="flex justify-between items-center text-[#edeef2] font-semibold sm:text-[16px] text-[14px]">
-                  <h3>{faq.question}?</h3>
+                  <h4>{faq.question}?</h4>
                   <button
                     onClick={() => handleAnswer(faq.id)}
                     aria-expanded={isOpen}
                     aria-controls={`faq-${faq.id}`}
+                    aria-label={isOpen ? "Collapse answer" : "Expand answer"}
                   >
                     {isOpen ? <Minus /> : <Plus />}
                   </button>
                 </div>
                 {isOpen && (
-                  <div className="mt-[10px] text-[#edeef270] sm:text-[15px] text-[13px] text-justify">
+                  <div
+                    id={`faq-${faq.id}`}
+                    role="region"
+                    aria-labelledby={`faq-question-${faq.id}`}
+                    className="mt-[10px] text-[#edeef270] sm:text-[15px] text-[13px] text-justify"
+                  >
                     {faq.answer}.
                   </div>
                 )}
