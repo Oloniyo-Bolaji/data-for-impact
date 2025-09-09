@@ -56,7 +56,7 @@ export const getArticles = `*[_type == "articles"] | order(_createdAt desc){
   "slug": slug.current,
   coverImage,
   content,
-  mentor->{
+  author->{
     name,
     profilePicture
   },

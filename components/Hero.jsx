@@ -12,10 +12,10 @@ const Hero = () => {
             Data for <span className="text-teal">Impact</span>
           </h1>
           <p className="mt-4 text-grey text-lg leading-relaxed">
-            A data-driven organization that empowers individuals and
-            organizations by building capacity, leveraging advanced analytics,
-            AI, and innovation, while translating complex data into actionable
-            insights for policy, advocacy, and sustainable impact.
+            We believe data has the power to change lives. At Data for Impact,
+            we build skills, develop leaders, and use insights to drive better
+            ecisions and sustainable shange for communities across Africa and
+            beyond.
           </p>
 
           {/* Buttons */}

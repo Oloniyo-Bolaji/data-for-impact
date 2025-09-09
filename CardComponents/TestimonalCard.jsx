@@ -6,7 +6,7 @@ const TestimonalCard = ({ testimonial, className = "" }) => {
   const { picture, name, location, testimony } = testimonial || {};
 
   return (
-    <figure className={`relative mx-12 mt-12 w-[350px] ${className}`}>
+    <figure className="relative mx-12 mt-12 w-[350px]">
       {/* Background layers using pseudo-elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 rotate-[-6deg] rounded-xl bg-blue" />
