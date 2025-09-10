@@ -1,3 +1,4 @@
+import { ChartNoAxesColumn, History, MemoryStick } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,13 +9,13 @@ const Hero = () => {
       className="bg-gradient-to-b from-white to-faintblue h-screen flex items-center"
     >
       {/* Hero Content */}
-      <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 items-center gap-10 sm:px-10 px-5 h-full">
+      <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 items-center gap-8 sm:px-10 px-5 h-full">
         {/* Left */}
         <div className="flex flex-col justify-center gap-2.5">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
             Data for <span className="text-teal">Impact</span>
           </h1>
-          <p className="mt-4 text-grey text-lg leading-relaxed">
+          <p className="mt-4 text-grey sm:text-lg text-base leading-relaxed">
             We believe data has the power to change lives. At Data for Impact,
             we build skills, develop leaders, and use insights to drive better
             decisions and sustainable change for communities across Africa and
@@ -56,14 +57,23 @@ const Hero = () => {
           </div>
 
           {/* Floating Tags */}
-          <div className="absolute top-25 right-30 text-blue bg-faintblue shadow-md px-4 py-2 rounded-full text-sm font-medium">
-            Data Storytelling
+          <div className="inline-flex items-center gap-2 absolute sm:top-25 top-15 lg:right-30 sm:right-10 right-5 text-blue bg-faintblue shadow-md px-4 py-2 rounded-full text-sm font-medium">
+            <span>
+              <History />
+            </span>
+            <span>Data Storytelling</span>
           </div>
-          <div className="absolute top-60 right-20 text-blue bg-faintblue shadow-md px-4 py-2 rounded-full text-sm font-medium">
-            Modelling
+          <div className="inline-flex items-center gap-2 absolute sm:top-60 top-35 lg:right-20 sm:right-10 right-5 text-blue bg-faintblue shadow-md px-4 py-2 rounded-full text-sm font-medium">
+            <span>
+              <ChartNoAxesColumn />
+            </span>
+            <span>Modelling</span>
           </div>
-          <div className="absolute bottom-25 right-20 text-blue bg-faintblue shadow-md px-4 py-2 rounded-full text-sm font-medium">
-            Capacity Building
+          <div className="inline-flex items-center gap-2 absolute sm:bottom-25 bottom-15 lg:right-10 sm:right-5 right-0 text-blue bg-faintblue shadow-md px-4 py-2 rounded-full text-sm font-medium">
+            <span>
+              <MemoryStick />
+            </span>
+            <span> Capacity Building</span>
           </div>
         </div>
       </div>

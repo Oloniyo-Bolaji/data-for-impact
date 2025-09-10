@@ -13,10 +13,7 @@ const FounderNote = async () => {
   if (!note) return null;
 
   return (
-    <section
-      className="max-w-screen-xl mx-auto lg:px-10 sm:px-10 px-5 my-10"
-      aria-labelledby="founder-heading"
-    >
+    <section aria-labelledby="founder-heading">
       <div className="flex flex-col sm:flex-row rounded-3xl border-2 border-[#00274d] overflow-hidden w-full">
         {/**Founder Image */}
         <div className="relative sm:w-1/2 w-full min-h-[300px]">
@@ -27,6 +24,7 @@ const FounderNote = async () => {
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
             priority={false}
+            loading="lazy"
           />
         </div>
 

@@ -12,9 +12,9 @@ const FoundersCard = ({ note }) => {
       {note.content && (
         <PortableText value={note.content} components={components} />
       )}
-      <h3 className="font-semibold text-blue text-xl">{note.name}</h3>
+      <h4 className="font-semibold text-blue text-xl">{note.name}</h4>
       {note.position && (
-        <h4 className="font-semibold text-grey text-lg">{note.position}</h4>
+        <h5 className="font-semibold text-grey text-lg">{note.position}</h5>
       )}
     </div>
   );

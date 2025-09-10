@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center py-10 sm:px-16 px-6"
+      className="flex flex-col items-center py-5"
       aria-labelledby="about-heading"
     >
       {/* Brief About Text */}
