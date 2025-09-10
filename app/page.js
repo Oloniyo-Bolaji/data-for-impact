@@ -1,8 +1,8 @@
-import Announcement from "@/components/Announcement";
-import Hero from "@/components/Hero";
-import Metrics from "@/components/Metrics";
-import Partners from "@/components/Partners";
-import WhatWeDo from "@/components/WhatWeDo";
+import Announcement from "@/Components/Announcement";
+import Hero from "@/Components/Hero";
+import Metrics from "@/Components/Metrics";
+import Partners from "@/Components/Partners";
+import WhatWeDo from "@/Components/WhatWeDo";
 
  const Home = () => {
   return (

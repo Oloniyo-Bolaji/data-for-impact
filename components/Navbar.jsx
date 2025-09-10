@@ -23,7 +23,7 @@ const Navbar = () => {
   const closeMenu = useCallback(() => setShowMenu(false), []);
 
   return (
-    <nav className="h-[70px] sm:w-full w-full flex justify-between items-center fixed top-0 left-0 z-[1000] sm:px-10 px-5 py-[0] bg-white/5  backdrop-blur-sm ">
+    <nav className="h-[70px] sm:w-full w-full flex justify-between items-center fixed top-0 left-0 z-[1000] sm:px-10 px-5 py-[0] bg-white/5 backdrop-blur-sm shadow-md ">
       <div className="sm:px-[10px]">
         <Image
           src="/datalogo.jpg"

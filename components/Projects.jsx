@@ -74,7 +74,16 @@ const Projects = ({ projects }) => {
     itemRefs.current[i] = el;
   };
 
-  const DOT_SIZE = 25; // px
+  const [dotSize, setDotSize] = useState(25);
+
+  useEffect(() => {
+    const updateSize = () => {
+      setDotSize(window.innerWidth < 640 ? 18 : 25);
+    };
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
 
   return (
     <div id="projects" className="mx-auto max-w-4xl my-[50px] px-4">
@@ -109,7 +118,7 @@ const Projects = ({ projects }) => {
 
           {/* Dots positioned at centers */}
           {dotPositions.map((pos, i) => {
-            const topPx = (pos || 0) - DOT_SIZE / 2;
+            const topPx = (pos || 0) - dotSize / 2;
             const isActive = i === activeIndex;
             return (
               <button
@@ -137,8 +146,8 @@ const Projects = ({ projects }) => {
                 style={{
                   left: "50%",
                   top: `${topPx}px`,
-                  width: DOT_SIZE,
-                  height: DOT_SIZE,
+                  width: dotSize,
+                  height: dotSize,
                   backgroundColor: isActive ? "#008080" : "#9CA3AF",
                   border: "2px solid white",
                   transition: "background-color 150ms, transform 150ms",

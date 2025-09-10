@@ -3,18 +3,21 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section id="top" className="bg-gradient-to-b from-white to-faintblue">
+    <section
+      id="top"
+      className="bg-gradient-to-b from-white to-faintblue h-screen flex items-center"
+    >
       {/* Hero Content */}
-      <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 items-center gap-10 sm:px-10 px-5 py-16">
+      <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 items-center gap-10 sm:px-10 px-5 h-full">
         {/* Left */}
-        <div>
+        <div className="flex flex-col justify-center gap-2.5">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
             Data for <span className="text-teal">Impact</span>
           </h1>
           <p className="mt-4 text-grey text-lg leading-relaxed">
             We believe data has the power to change lives. At Data for Impact,
             we build skills, develop leaders, and use insights to drive better
-            ecisions and sustainable shange for communities across Africa and
+            decisions and sustainable change for communities across Africa and
             beyond.
           </p>
 
@@ -38,26 +41,28 @@ const Hero = () => {
         </div>
 
         {/* Right */}
-        <div className="relative flex justify-center">
+        <div className="relative flex justify-center items-end h-full">
           {/* Person Image */}
-          <div className="relative w-[300px] h-[400px] md:w-[350px] md:h-[450px]">
+          <div className="relative w-full max-w-[400px] h-[60vh] md:h-[80vh] flex items-end">
             <Image
               src="/hero.png"
               alt="Person"
               fill
-              className="object-cover rounded-lg filter drop-shadow-[0_15px_20px_#00274d]"
+              quality={100}
+              className="object-contain md:object-cover"
               priority
+              sizes="(max-width: 768px) 80vw, 400px"
             />
           </div>
 
           {/* Floating Tags */}
-          <div className="absolute top-10 right-20 text-blue bg-white shadow-md px-4 py-2 rounded-full text-sm font-medium">
+          <div className="absolute top-25 right-30 text-blue bg-faintblue shadow-md px-4 py-2 rounded-full text-sm font-medium">
             Data Storytelling
           </div>
-          <div className="absolute top-40 right-15 text-blue  bg-white shadow-md px-4 py-2 rounded-full text-sm font-medium">
+          <div className="absolute top-60 right-20 text-blue bg-faintblue shadow-md px-4 py-2 rounded-full text-sm font-medium">
             Modelling
           </div>
-          <div className="absolute bottom-16 right-20 text-blue bg-white shadow-md px-4 py-2 rounded-full text-sm font-medium">
+          <div className="absolute bottom-25 right-20 text-blue bg-faintblue shadow-md px-4 py-2 rounded-full text-sm font-medium">
             Capacity Building
           </div>
         </div>

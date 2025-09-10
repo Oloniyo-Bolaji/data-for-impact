@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { quickLinks } from "@/lib/data";
 import { ArrowUpFromDot } from "lucide-react";
+import LinkedInIcon from "@/lib/icons/linkedin";
 
 const Footer = () => {
   return (
@@ -24,7 +25,10 @@ const Footer = () => {
                 aria-label="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
-              ></a>
+                className="flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 hover:bg-[#0A66C2] hover:text-white transition-colors duration-300"
+              >
+                <LinkedInIcon size={20} color="#edeef2" />
+              </a>
             </div>
           </div>
 

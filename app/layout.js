@@ -1,9 +1,9 @@
 import dynamic from "next/dynamic";
 import "./globals.css";
 import localFont from "next/font/local";
-import Footer from "@/components/Footer";
-const Navbar = dynamic(() => import("@/components/Navbar"));
-//const Footer = dynamic(() => import("@/components/Footer"));
+import Footer from "@/Components/Footer";
+const Navbar = dynamic(() => import("@/Components/Navbar"));
+//const Footer = dynamic(() => import("@/Components/Footer"));
 
 const montserrat = localFont({
   src: [

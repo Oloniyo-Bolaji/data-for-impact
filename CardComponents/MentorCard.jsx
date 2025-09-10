@@ -1,4 +1,5 @@
 import { urlFor } from "@/lib/imageBuilder";
+import LinkedInIcon from "@/lib/icons/linkedin";
 import Image from "next/image";
 import React from "react";
 
@@ -41,6 +42,7 @@ const MentorCard = ({ mentor }) => {
             aria-label={`${mentor.name} LinkedIn Profile`}
             className="flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white transition-colors duration-300"
           >
+            <LinkedInIcon size={20} color="#0A66C2" />
           </a>
         )}
       </div>
