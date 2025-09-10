@@ -1,4 +1,4 @@
-import AnnouncementCard from "@/CardComponents/AnnouncementCard";
+import AnnouncementCard from "@/card-component/AnnouncementCard";
 import { client } from "@/src/sanity/client";
 import { getAnnouncement } from "@/src/sanity/queries";
 
@@ -17,7 +17,7 @@ const Announcement = async () => {
           Upcoming <span className="text-teal">Events</span>
         </h3>
 
-        {/* Announcement Box */}
+        {/* Announcement Container */}
        <AnnouncementCard announcement={announcement[0].newAnnouncement}/>
       </div>
     </section>

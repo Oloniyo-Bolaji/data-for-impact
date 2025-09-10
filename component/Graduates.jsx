@@ -1,6 +1,6 @@
 import { getGraduates } from "@/src/sanity/queries";
 import { client } from "@/src/sanity/client";
-import GraduatesCard from "@/CardComponents/GraduatesCard";
+import GraduatesCard from "@/card-component/GraduatesCard";
 
 const options = { next: { revalidate: 30 } };
 

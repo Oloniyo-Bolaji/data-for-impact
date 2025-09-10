@@ -1,7 +1,7 @@
-import About from "@/Components/About";
-import FounderNote from "@/Components/FounderNote";
-import Header from "@/Components/Header";
-import Mentor from "@/Components/Mentor";
+import About from "@/component/About";
+import FounderNote from "@/component/FounderNote";
+import Header from "@/component/Header";
+import Mentor from "@/component/Mentor";
 import React from "react";
 
 const page = () => {

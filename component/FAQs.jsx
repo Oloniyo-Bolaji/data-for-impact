@@ -25,7 +25,7 @@ const FAQs = () => {
           </p>
         </div>
 
-        <div className="sm:w-[65%] w-full p-[20px] flex flex-col justify-center items-center bg-[#505e7d] divide-[#7a7a7a] divide-y-[1px]">
+        <div className="sm:w-[65%] w-full p-[20px]  flex-col-center bg-[#505e7d] divide-[#7a7a7a] divide-y-[1px]">
           {faqs.map((faq) => {
             const isOpen = openId === faq.id;
 
@@ -47,7 +47,7 @@ const FAQs = () => {
                     id={`faq-${faq.id}`}
                     role="region"
                     aria-labelledby={`faq-question-${faq.id}`}
-                    className="mt-[10px] text-[#edeef270] sm:text-[15px] text-[13px] text-justify"
+                    className="mt-2.5 text-[#edeef270] sm:text-[15px] text-[13px] text-justify"
                   >
                     {faq.answer}.
                   </div>

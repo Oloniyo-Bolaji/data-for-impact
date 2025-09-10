@@ -1,4 +1,4 @@
-import ShareArticle from "@/DynamicComponents/ShareArticleWrapper";
+import ShareArticle from "@/dynamic-component/ShareArticleWrapper";
 import { components } from "@/lib/components";
 import { urlFor } from "@/lib/imageBuilder";
 import getReadingTime from "@/lib/readTime";

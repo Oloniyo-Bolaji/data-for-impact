@@ -1,6 +1,6 @@
-import FAQs from "@/Components/FAQs";
-import Service from "@/Components/Service";
-import Testimonials from "@/Components/Testimonials";
+import FAQs from "@/component/FAQs";
+import Service from "@/component/Service";
+import Testimonials from "@/component/Testimonials";
 import React from "react";
 
 const page = () => {

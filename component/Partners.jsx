@@ -1,6 +1,6 @@
 import { getSponsors } from "@/src/sanity/queries";
 import { client } from "@/src/sanity/client";
-import PartnersCard from "@/DynamicComponents/PartnersCardWrapper";
+import PartnersCard from "@/dynamic-component/PartnersCardWrapper";
 
 const options = { next: { revalidate: 30 } };
 
@@ -13,7 +13,7 @@ const Partners = async () => {
         <h3 className="headings">
           Our Sponsors & <span className="text-teal">Partners</span>
         </h3>
-        <PartnersCard sponsors={sponsors}/>
+        <PartnersCard sponsors={sponsors} />
       </div>
     </section>
   );

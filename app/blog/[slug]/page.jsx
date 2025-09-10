@@ -1,5 +1,5 @@
-import BackButton from "@/Components/BackButton";
-import BlogContent from "@/components/BlogContent";
+import BackButton from "@/component/BackButton";
+import BlogContent from "@/component/BlogContent";
 
 const page = ({ params }) => {
   return (

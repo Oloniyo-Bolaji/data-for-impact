@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const ShareArticle = dynamic(() => import("@/Components/ShareArticle"), {
+const ShareArticle = dynamic(() => import("@/component/ShareArticle"), {
   ssr: false,
 });
 

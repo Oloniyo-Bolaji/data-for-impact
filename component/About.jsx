@@ -1,4 +1,4 @@
-import InfoCard from "@/CardComponents/InfoCard";
+import InfoCard from "@/card-component/InfoCard";
 import React from "react";
 
 const About = () => {
@@ -12,7 +12,7 @@ const About = () => {
       <h2 id="about-heading" className="headings">
         Who We <span className="text-teal">Are</span>
       </h2>
-      
+
       <p className="max-w-[600px] text-center text-grey text-sm leading-relaxed">
         Data for Impact (DFI) is both a community and a consultancy dedicated to
         transforming lives through data, artificial intelligence, and digital

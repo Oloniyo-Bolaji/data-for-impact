@@ -1,5 +1,5 @@
-import Graduates from "@/Components/Graduates";
-import ProjectsPage from "@/Components/ProjectsPage";
+import Graduates from "@/component/Graduates";
+import ProjectsPage from "@/component/ProjectsPage";
 import React from "react";
 
 const page = () => {

@@ -1,4 +1,4 @@
-import TestimonalCard from "@/CardComponents/TestimonalCard";
+import TestimonalCard from "@/card-component/TestimonalCard";
 import { client } from "@/src/sanity/client";
 import { getTestimonials } from "@/src/sanity/queries";
 import Marquee from "react-fast-marquee";

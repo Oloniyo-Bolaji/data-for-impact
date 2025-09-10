@@ -1,4 +1,4 @@
-import ServiceCard from "@/CardComponents/ServiceCard";
+import ServiceCard from "@/card-component/ServiceCard";
 import { coreServices } from "@/lib/data";
 import React from "react";
 

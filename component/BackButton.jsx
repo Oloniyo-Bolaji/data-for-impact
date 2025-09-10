@@ -20,7 +20,7 @@ const BackButton = () => {
       <button
         onClick={handleBack}
         aria-label="Back Button"
-        className="text-[25px]"
+        className="text-2xl font-bold"
       >
         <ChevronLeft />
       </button>

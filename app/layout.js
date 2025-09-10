@@ -1,8 +1,8 @@
 import dynamic from "next/dynamic";
 import "./globals.css";
 import localFont from "next/font/local";
-import Footer from "@/Components/Footer";
-const Navbar = dynamic(() => import("@/Components/Navbar"));
+import Footer from "@/component/Footer";
+const Navbar = dynamic(() => import("@/component/Navbar"));
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const montserrat = localFont({

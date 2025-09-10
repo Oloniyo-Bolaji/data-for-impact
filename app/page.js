@@ -1,10 +1,10 @@
-import Announcement from "@/Components/Announcement";
-import Hero from "@/Components/Hero";
-import Metrics from "@/Components/Metrics";
-import Partners from "@/Components/Partners";
-import WhatWeDo from "@/Components/WhatWeDo";
+import Announcement from "@/component/Announcement";
+import Hero from "@/component/Hero";
+import Metrics from "@/component/Metrics";
+import Partners from "@/component/Partners";
+import WhatWeDo from "@/component/WhatWeDo";
 
- const Home = () => {
+const Home = () => {
   return (
     <div className="">
       <Hero />
@@ -14,6 +14,6 @@ import WhatWeDo from "@/Components/WhatWeDo";
       <Announcement />
     </div>
   );
-}
+};
 
 export default Home;

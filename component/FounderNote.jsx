@@ -1,4 +1,4 @@
-import FoundersCard from "@/CardComponents/FoundersCard";
+import FoundersCard from "@/card-component/FoundersCard";
 import { urlFor } from "@/lib/imageBuilder";
 import { client } from "@/src/sanity/client";
 import { getNote } from "@/src/sanity/queries";
@@ -31,7 +31,7 @@ const FounderNote = async () => {
         </div>
 
         {/**Foundersnote content */}
-        <FoundersCard note={note}/>
+        <FoundersCard note={note} />
       </div>
     </section>
   );

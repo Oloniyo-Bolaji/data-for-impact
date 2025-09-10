@@ -1,9 +1,9 @@
 import React from "react";
 import { client } from "@/src/sanity/client";
 import { getArticles } from "@/src/sanity/queries";
-import Header from "@/Components/Header";
-import NoBlog from "@/Components/NoBlog";
-import BlogCard from "@/CardComponents/BlogCard";
+import Header from "@/component/Header";
+import NoBlog from "@/component/NoBlog";
+import BlogCard from "@/card-component/BlogCard";
 
 const options = { next: { revalidate: 30 } };
 
