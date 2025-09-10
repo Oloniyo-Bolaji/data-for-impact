@@ -6,31 +6,31 @@ const Hero = () => {
   return (
     <section
       id="top"
-      className="bg-gradient-to-b from-white to-faintblue h-screen flex items-center"
+      className="bg-gradient-to-b from-white to-[#00274d60] min-h-screen flex items-center"
     >
-      {/* Hero Content */}
-      <div className="max-w-screen-xl mx-auto grid lg:grid-cols-2 lg:items-center items-center justify-center sm:items-start gap-8 sm:px-10 px-5 h-full">
+      <div className="max-w-screen-xl mx-auto grid lg:grid-cols-2 gap-8 px-5 sm:px-10 items-center">
         {/* Left */}
-        <div className="flex flex-col justify-center gap-2.5">
-          <h1 className="text-3xl sm:text-6xl lg:text-4xl font-extrabold text-gray-900 leading-tight">
+        <div className="flex flex-col justify-center gap-4">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-blue leading-tight">
             Data for <span className="text-teal">Impact</span>
           </h1>
-          <p className="mt-4 text-grey sm:text-lg text-base leading-relaxed">
+          <p className="text-grey text-base sm:text-lg md:text-xl leading-relaxed mt-4">
             We believe data has the power to change lives. At Data for Impact,
             we build skills, develop leaders, and use insights to drive better
             decisions and sustainable change for communities across Africa and
             beyond.
           </p>
-
-          {/* Buttons */}
+          {/* Buttons */}{" "}
           <div className="mt-6 flex gap-4">
+            {" "}
             <Link
               href="/contact"
               aria-label="Contact Us"
               className="bg-blue text-white cta-btn hover:bg-lightblue"
             >
-              Contact Us
-            </Link>
+              {" "}
+              Contact Us{" "}
+            </Link>{" "}
             <Link
               href="/expertise"
               aria-label="Take a look at our projects"
@@ -42,38 +42,36 @@ const Hero = () => {
         </div>
 
         {/* Right */}
-        <div className="relative lg:flex hidden justify-center items-end h-full">
+        <div className="relative flex justify-center items-center w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]">
           {/* Person Image */}
-          <div className="relative w-full max-w-[400px] h-[50vh] sm:h-[60vh] md:h-[80vh] flex items-end">
-            <Image
-              src="/hero.png"
-              alt="Person"
-              fill
-              quality={100}
-              className="object-contain md:object-contain lg:object-cover"
-              priority
-              sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 400px"
-            />
-          </div>
+          <Image
+            src="/hero1.png"
+            alt="Person"
+            fill
+            quality={100}
+            className="object-contain md:object-cover"
+            priority
+            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 400px"
+          />
 
           {/* Floating Tags */}
-          <div className="sm:top-25 top-15 lg:right-30 sm:right-10 right-5 floats">
-            <span>
-              <History />
+          <div className="absolute top-4 left-4 flex items-center gap-2 bg-white p-2 rounded-lg shadow-md">
+            <History className="text-blue-500" />
+            <span className="text-gray-800 text-sm sm:text-base">
+              Data Storytelling
             </span>
-            <span>Data Storytelling</span>
           </div>
-          <div className="sm:top-60 top-35 lg:right-20 sm:right-10 right-5 floats">
-            <span>
-              <ChartNoAxesColumn />
+          <div className="absolute top-1/3 right-4 flex items-center gap-2 bg-white p-2 rounded-lg shadow-md">
+            <ChartNoAxesColumn className="text-green-500" />
+            <span className="text-gray-800 text-sm sm:text-base">
+              Modelling
             </span>
-            <span>Modelling</span>
           </div>
-          <div className="sm:bottom-25 bottom-15 lg:right-10 sm:right-5 right-0 floats">
-            <span>
-              <MemoryStick />
+          <div className="absolute bottom-4 right-4 flex items-center gap-2 bg-white p-2 rounded-lg shadow-md">
+            <MemoryStick className="text-teal-500" />
+            <span className="text-gray-800 text-sm sm:text-base">
+              Capacity Building
             </span>
-            <span> Capacity Building</span>
           </div>
         </div>
       </div>
