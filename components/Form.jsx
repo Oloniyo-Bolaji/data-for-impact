@@ -25,15 +25,19 @@ const Form = () => {
       if (res.ok) {
         setStatus("success");
         setForm({ name: "", email: "", message: "" });
+
+        setTimeout(() => setStatus("idle"), 3000);
       } else {
         setStatus("error");
+        setTimeout(() => setStatus("idle"), 3000);
       }
     } catch {
       setStatus("error");
+      setTimeout(() => setStatus("idle"), 3000);
     }
   };
 
-  const inputClass = "inputs"; // centralize shared styles (Tailwind already handles focus, padding, etc.)
+  const inputClass = "inputs";
 
   return (
     <form

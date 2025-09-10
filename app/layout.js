@@ -3,7 +3,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import Footer from "@/Components/Footer";
 const Navbar = dynamic(() => import("@/Components/Navbar"));
-//const Footer = dynamic(() => import("@/Components/Footer"));
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const montserrat = localFont({
   src: [
@@ -38,6 +38,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <div className="mt-[70px]">{children}</div>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
