@@ -1,6 +1,7 @@
 import { getMentors } from "@/src/sanity/queries";
 import { client } from "@/src/sanity/client";
 import MentorCard from "@/dynamic-component/MentorCardWrapper";
+import Heading from "./Heading";
 
 const options = { next: { revalidate: 30 } };
 
@@ -13,10 +14,8 @@ const Mentor = async () => {
     <section aria-labelledby="mentors-heading" className="my-5">
       {/* Heading */}
       <div className="text-center max-w-2xl mx-auto">
-        <h2 id="mentors-heading" className="headings">
-          Meet The <span className="text-teal">Mentors</span>
-        </h2>
-        <p className="heading-description">
+        <Heading heading="Meet The Mentors" />
+        <p className="heading-description py-5">
           Our proactive mentors are industry leaders passionate about guiding
           the next generation of data innovators.
         </p>

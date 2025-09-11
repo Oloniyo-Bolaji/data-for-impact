@@ -13,8 +13,8 @@ const FounderNote = async () => {
   if (!note) return null;
 
   return (
-    <section aria-labelledby="founder-heading">
-      <div className="flex flex-col sm:flex-row rounded-3xl border-2 border-[#00274d] overflow-hidden w-full">
+    <section aria-labelledby="founder-heading" className="my-5">
+      <div className="flex flex-col sm:flex-row rounded-3xl border-2 border-blue overflow-hidden w-full">
         {/**Founder Image */}
         <div className="relative sm:w-1/2 w-full min-h-[300px]">
           <Image

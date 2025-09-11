@@ -11,7 +11,7 @@ const links = [
   { href: "/expertise", label: "DFI's Expertise" },
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact Us" },
+  { href: "/contact", label: "Contact" },
   { href: "/blog", label: "Blog" },
 ];
 
@@ -24,16 +24,18 @@ const Navbar = () => {
 
   return (
     <nav className="h-[70px] sm:w-full w-full flex justify-between items-center fixed top-0 left-0 z-[1000] sm:px-10 px-5 py-[0] bg-white/5 backdrop-blur-sm shadow-md ">
-      <div className="sm:px-[10px]">
-        <Image
-          src="/datalogo.jpg"
-          alt="logo"
-          width={40}
-          height={40}
-          priority
-          quality={70}
-          className="w-full h-auto object-contain rounded-full"
-        />
+      <div className="sm:px-2.5">
+        <Link href="/">
+          <Image
+            src="/datalogo.jpg"
+            alt="logo"
+            width={40}
+            height={40}
+            priority
+            quality={70}
+            className="w-full h-auto object-contain rounded-full"
+          />
+        </Link>
       </div>
       <div className="sm:hidden block text-[25px]" onClick={toggleMenu}>
         {showMenu ? <X /> : <Menu />}

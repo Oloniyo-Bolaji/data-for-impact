@@ -20,17 +20,15 @@ const Hero = () => {
             decisions and sustainable change for communities across Africa and
             beyond.
           </p>
-          {/* Buttons */}{" "}
+          {/* Buttons */}
           <div className="mt-6 flex gap-4">
-            {" "}
             <Link
               href="/contact"
               aria-label="Contact Us"
               className="bg-blue text-white cta-btn hover:bg-lightblue"
             >
-              {" "}
-              Contact Us{" "}
-            </Link>{" "}
+              Contact Us
+            </Link>
             <Link
               href="/expertise"
               aria-label="Take a look at our projects"
@@ -42,7 +40,7 @@ const Hero = () => {
         </div>
 
         {/* Right */}
-        <div className="relative flex justify-center items-center w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]">
+        <div className="relative flex justify-center items-center w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[80vh]">
           {/* Person Image */}
           <Image
             src="/hero1.png"
@@ -51,7 +49,7 @@ const Hero = () => {
             quality={100}
             className="object-contain md:object-cover"
             priority
-            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 400px"
+            sizes="(max-width: 768px) 80vw, (max-width: 1024px) 50vw, 400px"
           />
 
           {/* Floating Tags */}

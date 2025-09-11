@@ -28,7 +28,7 @@ const WhatWeDo = () => {
           <Link
             href="/expertise"
             aria-label="Learn more about our core services"
-            className="inline-flex items-center justify-center w-[150px] rounded-[10px] bg-[#008080]/80 p-[10px] text-[15px] text-white hover:bg-[#008080] transition"
+            className="inline-flex items-center justify-center w-[150px] rounded-[10px] bg-[#00274d]/80 p-[10px] text-[15px] text-white hover:bg-blue transition"
           >
             Learn More
           </Link>

@@ -1,6 +1,7 @@
 import { getGraduates } from "@/src/sanity/queries";
 import { client } from "@/src/sanity/client";
 import GraduatesCard from "@/card-component/GraduatesCard";
+import Heading from "./Heading";
 
 const options = { next: { revalidate: 30 } };
 
@@ -9,11 +10,11 @@ const Graduates = async () => {
 
   return (
     <div className="max-w-screen-xl mx-auto pt-[10px]">
-      <h4 className="headings"> Meet Some of our alumni</h4>
-      <p className="heading-description">
+      <Heading heading="Meet Some of our alumni" />
+      <p className="heading-description py-5">
         Some of the amazing people who have been mentored by us
       </p>
-      <div className="py-[10px]">
+      <div className="py-2">
         <GraduatesCard graduates={graduates} />
       </div>
     </div>

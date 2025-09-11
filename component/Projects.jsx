@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Heading from "./Heading";
 
 const Projects = ({ projects }) => {
   const listRef = useRef(null); // wrapper of the project cards
@@ -87,14 +88,11 @@ const Projects = ({ projects }) => {
 
   return (
     <div id="projects" className="mx-auto max-w-4xl my-[50px] px-4">
-      <div className="flex flex-col items-center gap-[-10px]">
-        <h3 className="headings my-[10px]">Projects</h3>
-        <div className="w-[60px] border-t-2 border-blue"></div>
-      </div>
-      <p className="heading-description">Some of the Impacts We’ve Made</p>
+      <Heading heading="Projects" />
+      <p className="heading-description py-5">Some of the Impacts We’ve Made</p>
       <div className="flex items-start gap-8 my-[10px]">
         {/* INDICATOR COLUMN */}
-        <div ref={indicatorRef} className="relative w-12 flex-shrink-0">
+        <div ref={indicatorRef} className="hidden sm:block relative w-12 flex-shrink-0">
           {/* Gray full line (background) - spans the listHeight */}
           <div
             className="absolute left-1/2 transform -translate-x-1/2 w-1 rounded"
@@ -168,7 +166,7 @@ const Projects = ({ projects }) => {
                 key={i}
                 id={`project-${i}`}
                 ref={(el) => setItemRef(el, i)}
-                className="rounded-2xl bg-white p-6 shadow border-l-4 border-blue"
+                className="rounded-2xl bg-white p-6 shadow border-r-4 border-blue"
               >
                 <h3 className="text-lg font-semibold text-blue">{p.title}</h3>
                 <p className="mt-2 text-grey text-sm leading-relaxed">

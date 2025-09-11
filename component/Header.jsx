@@ -3,15 +3,15 @@ import React from "react";
 
 const Header = ({ heading }) => {
   return (
-    <header className="max-w-screen-xl mx-auto sm:px-10 sm:py-5 py-2.5 px-5">
-      <div className="bg-faintblue h-[200px] flex-center sm:p-20 p-10 rounded-2xl ">
-        <h3 className="relative text-blue capitalize font-semibold border-blue bg-[#00274d20] border p-2.5 rounded-[10px]">
+    <header className="max-w-screen-xl mx-auto sm:px-10 py-2.5 px-5">
+      <div className="sm:h-[50px] h-[20px] flex-center sm:p-5 p-2.5">
+        <h3 className="relative text-blue text-sm capitalize font-medium animate-pulse bg-[#00274d20] p-2 rounded-lg">
           <span>{heading}</span>
           <span
             className="absolute -top-[10px] left-0 animate-pulse"
             aria-hidden="true"
           >
-            <Sparkles />
+            <Sparkles size={18}/>
           </span>
         </h3>
       </div>

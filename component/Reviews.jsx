@@ -1,6 +1,5 @@
-"use client";
-
 import React from "react";
+import Heading from "./Heading";
 
 const Reviews = () => {
   return (
@@ -8,8 +7,8 @@ const Reviews = () => {
       <div className="max-w-screen-xl mx-auto min-h-[400px]">
         {/* heading */}
         <div>
-          <h3 className="headings">Impact <span className="text-teal">Stories</span></h3>
-          <p className="heading-description">
+          <Heading heading=" Impact Stories" />
+          <p className="heading-description py-5">
             Our words are one thing, but the real impact is best expressed by
             those who’ve experienced it firsthand. Hear directly from our
             students as they share their journeys, challenges, and the

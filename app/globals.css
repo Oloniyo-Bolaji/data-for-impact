@@ -37,7 +37,7 @@
 }
 
 @utility heading-description {
-  @apply text-center sm:text-[15px] text-[13px] text-[#7a7a7a] font-normal leading-[22px] sm:max-w-[500px] mx-auto;
+  @apply text-center sm:text-[15px] text-[13px] text-[#7a7a7a] font-normal leading-[22px] sm:max-w-[450px] mx-auto;
 }
 
 @utility inputs {
@@ -46,8 +46,4 @@
 
 @utility cta-btn {
   @apply px-6 py-3 rounded-full font-medium text-sm transition;
-}
-
-@utility floats {
-  @apply inline-flex items-center gap-2 absolute text-blue bg-faintblue shadow-md px-4 py-2 rounded-full text-sm font-medium;
 }

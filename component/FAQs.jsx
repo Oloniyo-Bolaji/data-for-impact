@@ -25,13 +25,13 @@ const FAQs = () => {
           </p>
         </div>
 
-        <div className="sm:w-[65%] w-full p-[20px]  flex-col-center bg-[#505e7d] divide-[#7a7a7a] divide-y-[1px]">
+        <div className="sm:w-[65%] w-full p-5 flex-col-center bg-[#505e7d] divide-[#7a7a7a] divide-y-[1px]">
           {faqs.map((faq) => {
             const isOpen = openId === faq.id;
 
             return (
               <div key={faq.id} className="w-full flex flex-col py-2">
-                <div className="flex justify-between items-center text-[#edeef2] font-semibold sm:text-[16px] text-[14px]">
+                <div className="flex-between text-white font-bold sm:text-lg text-base">
                   <h4>{faq.question}?</h4>
                   <button
                     onClick={() => handleAnswer(faq.id)}
@@ -47,9 +47,9 @@ const FAQs = () => {
                     id={`faq-${faq.id}`}
                     role="region"
                     aria-labelledby={`faq-question-${faq.id}`}
-                    className="mt-2.5 text-[#edeef270] sm:text-[15px] text-[13px] text-justify"
+                    className="mt-2.5 text-white sm:text-sm text-xs text-justify"
                   >
-                    {faq.answer}.
+                    <h5> {faq.answer}.</h5>
                   </div>
                 )}
               </div>

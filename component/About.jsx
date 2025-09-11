@@ -1,19 +1,17 @@
 import InfoCard from "@/card-component/InfoCard";
 import React from "react";
+import Heading from "./Heading";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center py-5"
+      className="flex flex-col items-center"
       aria-labelledby="about-heading"
     >
       {/* Brief About Text */}
-      <h2 id="about-heading" className="headings">
-        Who We <span className="text-teal">Are</span>
-      </h2>
-
-      <p className="max-w-[600px] text-center text-grey text-sm leading-relaxed">
+      <Heading heading="Who We Are" />
+      <p className="max-w-[600px] text-center text-grey text-sm leading-relaxed py-5">
         Data for Impact (DFI) is both a community and a consultancy dedicated to
         transforming lives through data, artificial intelligence, and digital
         innovation. We equip individuals, organizations, and systems to harness
@@ -22,7 +20,7 @@ const About = () => {
       </p>
 
       {/* Mission & Vision */}
-      <div className="flex sm:flex-row flex-col gap-5 mt-5 mb-2.5 w-full">
+      <div className="flex sm:flex-row flex-col gap-5 my-5 w-full">
         {/* Mission */}
         <InfoCard
           title="Our Mission"

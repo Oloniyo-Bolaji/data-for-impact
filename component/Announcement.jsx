@@ -1,6 +1,7 @@
 import AnnouncementCard from "@/card-component/AnnouncementCard";
 import { client } from "@/src/sanity/client";
 import { getAnnouncement } from "@/src/sanity/queries";
+import Heading from "./Heading";
 
 const options = { next: { revalidate: 30 } };
 
@@ -10,15 +11,13 @@ const Announcement = async () => {
   if (!announcement || announcement.length === 0) return null;
 
   return (
-    <section className="my-10">
+    <section className="my-5">
       <div className="max-w-screen-xl mx-auto px-6">
         {/* Heading */}
-        <h3 className="headings mb-6">
-          Upcoming <span className="text-teal">Events</span>
-        </h3>
+        <Heading heading="Upcoming Events" />
 
         {/* Announcement Container */}
-       <AnnouncementCard announcement={announcement[0].newAnnouncement}/>
+        <AnnouncementCard announcement={announcement[0].newAnnouncement} />
       </div>
     </section>
   );
