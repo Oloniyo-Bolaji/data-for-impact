@@ -1,10 +1,8 @@
 import Header from "@/component/Header";
 import React from "react";
-import dynamic from "next/dynamic";
-
-const About = dynamic(() => import("@/component/About"));
-const FounderNote = dynamic(() => import("@/component/FounderNote"));
-const Mentor = dynamic(() => import("@/component/Mentor"));
+import About from "@/component/About";
+import FounderNote from "@/component/FounderNote";
+import MentorCard from "@/dynamic-component/MentorCardWrapper";
 
 const page = () => {
   return (
@@ -13,7 +11,7 @@ const page = () => {
       <div className="max-w-screen-xl mx-auto lg:px-10 sm:px-10 px-5 my-2">
         <About />
         <FounderNote />
-        <Mentor />
+        <MentorCard />
       </div>
     </main>
   );
