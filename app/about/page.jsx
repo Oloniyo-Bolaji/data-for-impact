@@ -2,7 +2,7 @@ import Header from "@/component/Header";
 import React from "react";
 import About from "@/component/About";
 import FounderNote from "@/component/FounderNote";
-import MentorCard from "@/dynamic-component/MentorCardWrapper";
+import Mentor from "@/component/Mentor";
 
 const page = () => {
   return (
@@ -11,7 +11,7 @@ const page = () => {
       <div className="max-w-screen-xl mx-auto lg:px-10 sm:px-10 px-5 my-2">
         <About />
         <FounderNote />
-        <MentorCard />
+        <Mentor />
       </div>
     </main>
   );

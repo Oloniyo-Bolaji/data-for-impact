@@ -1,6 +1,6 @@
 import { getMentors } from "@/src/sanity/queries";
 import { client } from "@/src/sanity/client";
-import MentorCard from "@/dynamic-component/MentorCardWrapper";
+import MentorCard from "@/card-component/MentorCard";
 import Heading from "./Heading";
 
 const options = { next: { revalidate: 30 } };
