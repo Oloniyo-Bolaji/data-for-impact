@@ -4,12 +4,11 @@ import React from "react";
 
 const ServiceCard = ({ service }) => {
   return (
-    <article className="w-full h-full rounded-2xl bg-[rgba(122,122,122,0.31)] shadow-[0_2px_2px_rgba(0,0,0,0.1)] backdrop-blur-[5px] border border-[rgba(122,122,122,0.3)]">
+    <article className="w-full h-full rounded-2xl bg-gradient-to-r from-[rgba(122,122,122,0.31)] to-[rgba(0,128,128,0.31)] shadow-[0_2px_2px_rgba(0,0,0,0.1)] backdrop-blur-[5px] border border-[rgba(0,128,128,0.3)]">
       <div className="w-full h-full rounded-2xl bg-white p-5 flex flex-col gap-2.5">
         <div className="flex">
           <span
-            style={{ color: service.color }}
-            className="border border-solid rounded-sm p-2.5 text-[20px]"
+            className="p-2.5 text-xl rounded-full text-teal bg-[#00808020]"
             aria-hidden="true"
           >
             {service.icons}

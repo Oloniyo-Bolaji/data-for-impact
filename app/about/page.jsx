@@ -8,7 +8,7 @@ const Mentor = dynamic(() => import("@/component/Mentor"));
 
 const page = () => {
   return (
-    <main>
+    <main className="py-3">
       <Header heading="Get to know us" />
       <div className="max-w-screen-xl mx-auto lg:px-10 sm:px-10 px-5 my-2">
         <About />

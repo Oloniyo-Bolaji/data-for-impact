@@ -1,12 +1,35 @@
+"use client";
+
 import { ChartNoAxesColumn, History, MemoryStick } from "lucide-react";
+import { useEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
+  const heroRef = useRef(null);
+  useEffect(() => {
+    gsap.from(heroRef.current, {
+      y: 100,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: heroRef.current,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  }, []);
+
   return (
     <section
       id="top"
-      className="bg-gradient-to-b from-white to-[#00274d60] min-h-screen flex items-center"
+      ref={heroRef}
+      className="bg-gradient-to-b from-white to-[#00274D60] min-h-screen flex items-center"
     >
       <div className="max-w-screen-xl mx-auto grid lg:grid-cols-2 gap-8 px-5 sm:px-10 items-center">
         {/* Left */}
@@ -46,7 +69,7 @@ const Hero = () => {
             src="/hero1.png"
             alt="Person"
             fill
-            quality={100}
+            quality={80}
             className="object-contain md:object-cover"
             priority
             sizes="(max-width: 768px) 80vw, (max-width: 1024px) 50vw, 400px"
@@ -59,7 +82,7 @@ const Hero = () => {
               Data Storytelling
             </span>
           </div>
-          <div className="absolute top-1/3 right-4 flex items-center gap-2 bg-white p-2 rounded-lg shadow-md">
+          <div className="absolute top-1/3 right-5 flex items-center gap-2 bg-white p-2 rounded-lg shadow-md">
             <ChartNoAxesColumn className="text-green-500" />
             <span className="text-gray-800 text-sm sm:text-base">
               Modelling

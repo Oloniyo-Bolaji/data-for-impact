@@ -16,7 +16,7 @@ const WhatWeDo = () => {
           </div>
 
           {/**description */}
-          <p className="text-grey leading-8">
+          <p className="text-grey leading-8 ">
             We empower aspiring and practising data professionals with
             bootcamps, mentorship, and real-world projects through our community
             and through our consultancy, we partner with governments, NGOs and
@@ -28,6 +28,7 @@ const WhatWeDo = () => {
           <Link
             href="/expertise"
             aria-label="Learn more about our core services"
+            prefetch
             className="inline-flex items-center justify-center w-[150px] rounded-[10px] bg-[#00274d]/80 p-[10px] text-[15px] text-white hover:bg-blue transition"
           >
             Learn More

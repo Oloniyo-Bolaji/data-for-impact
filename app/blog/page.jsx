@@ -11,9 +11,9 @@ const Blog = async () => {
   const articles = await client.fetch(getArticles, {}, options);
 
   return (
-    <>
+    <main className="py-3">
       <Header heading="Our Blog" />
-      <main className="max-w-screen-xl mx-auto py-5 sm:px-8 px-5">
+      <section className="max-w-screen-xl mx-auto py-5 sm:px-8 px-5">
         {articles && articles.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 items-start">
             {articles.map((article, index) => (
@@ -23,8 +23,8 @@ const Blog = async () => {
         ) : (
           <NoBlog />
         )}
-      </main>
-    </>
+      </section>
+    </main>
   );
 };
 

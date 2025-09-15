@@ -37,7 +37,7 @@
 }
 
 @utility heading-description {
-  @apply text-center sm:text-[15px] text-[13px] text-[#7a7a7a] font-normal leading-[22px] sm:max-w-[450px] mx-auto;
+  @apply text-center sm:text-[15px] text-[13px] text-[#7a7a7a] font-normal leading-[22px] max-w-[450px] mx-auto;
 }
 
 @utility inputs {
