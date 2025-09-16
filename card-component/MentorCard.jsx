@@ -17,7 +17,7 @@ const MentorCard = ({ mentor }) => {
         <div className="relative w-full h-full">
           <Image
             src={profileImage}
-            alt={`${mentor.name} profile picture`}
+            alt={`${mentor.name}, ${mentor.position}`}
             fill
             sizes="(max-width: 640px) 144px, 192px"
             loading="lazy"

@@ -6,7 +6,7 @@ import Heading from "./Heading";
 const options = { next: { revalidate: 30 } };
 
 const Announcement = async () => {
-  const announcement = await client.fetch(getAnnouncement, {}, options);
+  const [announcement] = await client.fetch(getAnnouncement, {}, options);
 
   if (!announcement || announcement.length === 0) return null;
 
@@ -17,7 +17,7 @@ const Announcement = async () => {
         <Heading heading="Upcoming Events" />
 
         {/* Announcement Container */}
-        <AnnouncementCard announcement={announcement[0].newAnnouncement} />
+        <AnnouncementCard announcement={announcement} />
       </div>
     </section>
   );

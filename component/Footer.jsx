@@ -5,7 +5,7 @@ import LinkedInIcon from "@/lib/icons/linkedin";
 
 const Footer = () => {
   return (
-    <footer className="bg-faintblue">
+    <footer className="bg-[#00274D60]">
       <div className="max-w-screen-xl mx-auto flex flex-col px-5 text-blue py-2.5">
         <div className="flex justify-between gap-1 sm:items-center sm:flex-row flex-col py-1.5">
           <div>

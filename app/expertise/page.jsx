@@ -7,8 +7,8 @@ const page = () => {
   return (
     <main>
       <Service />
-      <Testimonials />
       <FAQs />
+      <Testimonials />
     </main>
   );
 };

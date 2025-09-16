@@ -3,7 +3,7 @@ import React from "react";
 
 const WhatWeDo = () => {
   return (
-    <section className="bg-faintblue sm:py-20 py-12">
+    <section className="bg-gradient-to-b from-white to-[#00274d60] sm:py-20 py-12">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-12 flex ">
         <div className="flex flex-col gap-5">
           {/** heading */}
@@ -16,7 +16,7 @@ const WhatWeDo = () => {
           </div>
 
           {/**description */}
-          <p className="text-grey leading-8 ">
+          <p className="text-blue leading-8 ">
             We empower aspiring and practising data professionals with
             bootcamps, mentorship, and real-world projects through our community
             and through our consultancy, we partner with governments, NGOs and
@@ -29,7 +29,7 @@ const WhatWeDo = () => {
             href="/expertise"
             aria-label="Learn more about our core services"
             prefetch
-            className="inline-flex items-center justify-center w-[150px] rounded-[10px] bg-[#00274d]/80 p-[10px] text-[15px] text-white hover:bg-blue transition"
+            className="inline-flex items-center justify-center w-[150px] rounded-[10px] bg-[#008080]/80 p-[10px] text-[15px] text-white hover:bg-teal transition"
           >
             Learn More
           </Link>

@@ -12,17 +12,21 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const heroRef = useRef(null);
   useEffect(() => {
-    gsap.from(heroRef.current, {
-      y: 100,
-      opacity: 0,
-      duration: 1.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: heroRef.current,
-        start: "top 80%",
-        toggleActions: "play none none reverse",
-      },
-    });
+    const ctx = gsap.context(() => {
+      gsap.from(heroRef.current, {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    }, heroRef);
+
+    return () => ctx.revert(); // clean up animation + ScrollTrigger
   }, []);
 
   return (

@@ -2,7 +2,10 @@ import Header from "@/component/Header";
 import React from "react";
 import About from "@/component/About";
 import FounderNote from "@/component/FounderNote";
-import Mentor from "@/component/Mentor";
+import dynamic from "next/dynamic";
+
+const Mentor = dynamic(() => import("@/component/Mentor"), {
+});
 
 const page = () => {
   return (

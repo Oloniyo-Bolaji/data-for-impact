@@ -14,7 +14,7 @@ const Mentor = async () => {
     <section aria-labelledby="mentors-heading" className="my-5">
       {/* Heading */}
       <div className="text-center max-w-2xl mx-auto">
-        <Heading heading="Meet The Mentors" />
+        <Heading heading="Meet The Mentors" id="mentors-heading"/>
         <p className="heading-description py-5">
           Our proactive mentors are industry leaders passionate about guiding
           the next generation of data innovators.

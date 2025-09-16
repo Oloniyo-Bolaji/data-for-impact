@@ -1,11 +1,7 @@
-export const getRegistration = `*[_type == "registrationLink"]{
-  _id,
-  link,
-}`;
-
 export const getAnnouncement = `*[_type == "announcement"]{
   _id,
   newAnnouncement,
+  link
 }`;
 
 export const getSponsors = `*[_type == "sponsors"] {

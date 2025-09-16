@@ -1,20 +1,22 @@
-import FoundersCard from "@/card-component/FoundersCard";
 import { urlFor } from "@/lib/imageBuilder";
 import { client } from "@/src/sanity/client";
 import { getNote } from "@/src/sanity/queries";
 import Image from "next/image";
+import Heading from "./Heading";
+import dynamic from "next/dynamic";
+
+const FoundersCard = dynamic(() => import("@/card-component/FoundersCard"));
 
 const options = { next: { revalidate: 30 } };
 
 const FounderNote = async () => {
-  const notes = await client.fetch(getNote, {}, options);
-  const note = notes?.[0];
-
+  const [note] = await client.fetch(getNote, {}, options);
   if (!note) return null;
 
   return (
     <section aria-labelledby="founder-heading" className="my-5">
-      <div className="flex flex-col sm:flex-row rounded-3xl sm:border-2 sm:border-blue overflow-hidden w-full">
+      <Heading heading="From the Founder's Desk" id="founder-heading" />
+      <div className="flex flex-col sm:flex-row rounded-3xl sm:border-2 sm:border-blue overflow-hidden w-full my-5">
         {/**Founder Image */}
         <div className="relative sm:w-1/2 w-full min-h-[300px]">
           <Image
@@ -23,8 +25,6 @@ const FounderNote = async () => {
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
-            priority={false}
-            loading="lazy"
           />
         </div>
 

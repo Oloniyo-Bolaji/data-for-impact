@@ -7,7 +7,7 @@ const Service = () => {
   return (
     <section
       id="services"
-      className="py-5 bg-gradient-to-b from-white to-[#00274d60]"
+      className="py-5"
     >
       <div className="max-w-screen-xl mx-auto">
         <Heading heading=" Our Core Services" />
