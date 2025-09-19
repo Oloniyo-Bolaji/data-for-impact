@@ -1,6 +1,8 @@
 import dynamic from "next/dynamic";
 import "./globals.css";
 import localFont from "next/font/local";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Footer from "@/component/Footer";
 const Navbar = dynamic(() => import("@/component/Navbar"));
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -39,6 +41,7 @@ export default function RootLayout({ children }) {
         <div className="mt-[70px]">{children}</div>
         <Footer />
         <SpeedInsights />
+        <ToastContainer autoClose={2000} position="top-right" />
       </body>
     </html>
   );

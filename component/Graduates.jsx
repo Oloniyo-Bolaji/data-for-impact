@@ -12,7 +12,8 @@ const Graduates = async () => {
     <div className="max-w-screen-xl mx-auto pt-[10px]">
       <Heading heading="Meet Some of our alumni" />
       <p className="heading-description py-5">
-        Some of the amazing people who have been mentored by us
+        A glimpse of the remarkable individuals guided through our
+        mentorship.
       </p>
       <div className="py-2">
         <GraduatesCard graduates={graduates} />

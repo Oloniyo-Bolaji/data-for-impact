@@ -17,7 +17,7 @@ const AnnouncementCard = ({ announcement }) => {
             aria-label="Register Link"
             className="bg-blue text-white cta-btn hover:bg-lightblue"
           >
-            Join Next Cohort
+            Join the Next Cohort
           </a>
         )}
       </div>

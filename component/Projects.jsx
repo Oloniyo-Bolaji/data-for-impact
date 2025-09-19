@@ -92,7 +92,10 @@ const Projects = ({ projects }) => {
       <p className="heading-description py-5">Some of the Impacts We’ve Made</p>
       <div className="flex items-start gap-8 my-[10px]">
         {/* INDICATOR COLUMN */}
-        <div ref={indicatorRef} className="hidden sm:block relative w-12 flex-shrink-0">
+        <div
+          ref={indicatorRef}
+          className="hidden sm:block relative w-12 flex-shrink-0"
+        >
           {/* Gray full line (background) - spans the listHeight */}
           <div
             className="absolute left-1/2 transform -translate-x-1/2 w-1 rounded"
@@ -169,9 +172,11 @@ const Projects = ({ projects }) => {
                 className="rounded-2xl bg-white p-6 shadow border-r-4 border-blue"
               >
                 <h3 className="text-lg font-semibold text-blue">{p.title}</h3>
-                <p className="mt-2 text-grey text-sm leading-relaxed">
-                  {p.description}
-                </p>
+                {p.description && (
+                  <p className="mt-2 text-grey text-sm leading-relaxed">
+                    {p.description}
+                  </p>
+                )}
               </article>
             ))}
           </div>

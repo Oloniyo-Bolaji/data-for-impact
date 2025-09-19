@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const Form = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -24,15 +25,18 @@ const Form = () => {
 
       if (res.ok) {
         setStatus("success");
+        toast.success("Email sent successfully");
         setForm({ name: "", email: "", message: "" });
 
         setTimeout(() => setStatus("idle"), 3000);
       } else {
         setStatus("error");
         setTimeout(() => setStatus("idle"), 3000);
+        toast.error("Error is Sendug mail. Try again later!");
       }
     } catch {
       setStatus("error");
+      toast.error("Error is Sendug mail. Try again later!");
       setTimeout(() => setStatus("idle"), 3000);
     }
   };
@@ -114,18 +118,34 @@ const Form = () => {
             : "bg-[#00274d] text-white hover:bg-[#004080]"
         }`}
       >
-        {status === "loading" ? "Sending..." : "Send"}
+        {status === "loading" ? (
+          <>
+            <svg
+              className="mr-2 h-5 w-5 animate-spin text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              ></circle>
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+              ></path>
+            </svg>
+            Sending...
+          </>
+        ) : (
+          "Send"
+        )}{" "}
       </button>
-
-      {/* Status Message */}
-      <div className="text-sm mt-2" aria-live="polite">
-        {status === "success" && (
-          <p className="text-green-600">✅ Message sent successfully!</p>
-        )}
-        {status === "error" && (
-          <p className="text-red-600">❌ Failed to send. Please try again.</p>
-        )}
-      </div>
     </form>
   );
 };

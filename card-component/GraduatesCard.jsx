@@ -42,9 +42,9 @@ const GraduatesCard = ({ graduates }) => {
                   {graduate.name}
                 </h1>
                 <h4 className="text-[15px]">{graduate.cohort}</h4>
-                <h3 className="text-grey text-[14px]">
-                  {graduate.location}
-                </h3>
+                {graduate.location && (
+                  <h3 className="text-grey text-[14px]">{graduate.location}</h3>
+                )}
               </div>
             </SwiperSlide>
           ))}
