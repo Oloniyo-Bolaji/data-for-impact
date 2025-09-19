@@ -119,7 +119,7 @@ const Form = () => {
         }`}
       >
         {status === "loading" ? (
-          <>
+          <p className="inline-flex items-center">
             <svg
               className="mr-2 h-5 w-5 animate-spin text-white"
               xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@ const Form = () => {
               ></path>
             </svg>
             Sending...
-          </>
+          </p>
         ) : (
           "Send"
         )}{" "}
