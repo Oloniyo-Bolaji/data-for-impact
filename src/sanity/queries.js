@@ -80,3 +80,10 @@ _id,
   slug,
   description,
 }`;
+
+export const getSocials = `*[_type == "socials"]{
+  _id,
+  name,
+  slug,
+  link
+}`;

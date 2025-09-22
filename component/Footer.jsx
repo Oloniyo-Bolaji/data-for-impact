@@ -2,8 +2,27 @@ import React from "react";
 import Link from "next/link";
 import { quickLinks } from "@/lib/data";
 import LinkedInIcon from "@/lib/icons/linkedin";
+import { FacebookIcon } from "@/lib/icons/facebook";
+import XIcon from "@/lib/icons/x";
+import { getSocials } from "@/src/sanity/queries";
+import { client } from "@/src/sanity/client";
 
-const Footer = () => {
+const options = { next: { revalidate: 30 } };
+
+const Footer = async () => {
+  const socials = await client.fetch(getSocials, {}, options);
+  console.log(socials);
+
+  const getIcon = (value) => {
+    if (value === "LinkedIn") {
+      return <LinkedInIcon size={20} color="#0A66C2" />;
+    } else if (value === "X") {
+      return <XIcon size={20} color="#000000" />;
+    } else {
+      return <FacebookIcon size={20} color="#1877F2" />;
+    }
+  };
+
   return (
     <footer className="bg-[#00274D60]">
       <div className="max-w-screen-xl mx-auto flex flex-col px-5 text-blue py-2.5">
@@ -20,16 +39,21 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div>
-            <a
-              href="#"
-              aria-label="LinkedIn"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 hover:bg-[#edeef2] hover:text-[#0A66C2] transition-colors duration-300"
-            >
-              <LinkedInIcon size={20} color="#0A66C2" />
-            </a>
+          <div className="flex gap-1.5">
+            {socials.map((social) => {
+              return (
+                <a
+                  key={social._id}
+                  href={social.link}
+                  aria-label={social.name}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-center w-9 h-9 rounded-full border border-gray-300 hover:bg-[#edeef2] hover:text-[#0A66C2] transition-colors duration-300"
+                >
+                  {getIcon(social.name)}
+                </a>
+              );
+            })}
           </div>
         </div>
 
