@@ -11,7 +11,6 @@ const options = { next: { revalidate: 30 } };
 
 const Footer = async () => {
   const socials = await client.fetch(getSocials, {}, options);
-  console.log(socials);
 
   const getIcon = (value) => {
     if (value === "LinkedIn") {
