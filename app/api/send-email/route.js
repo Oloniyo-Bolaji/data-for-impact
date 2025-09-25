@@ -10,13 +10,14 @@ export async function POST(req) {
       from: "Data for Impact <contact@dataforimpactng.org>", // your verified domain in Resend
       to: "contact@dataforimpactng.org",
       subject: `New message from ${name}`,
-      reply_to: email,
+      replyTo: email,
       text: message,
     });
     // 2. Send confirmation email to the sender (branded HTML)
     await resend.emails.send({
       from: "Data for Impact <contact@dataforimpactng.org>", // your verified domain in Resend
       to: email, // user who filled the form
+      replyTo: "contact@dataforimpactng.org",
       subject: "Thanks for reaching out to Data for Impact!",
       html: `
     <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.5; padding: 20px; background-color: #f9fafb;">
