@@ -1,7 +1,8 @@
 export const getAnnouncement = `*[_type == "announcement"]{
   _id,
   newAnnouncement,
-  link
+  link,
+  button
 }`;
 
 export const getSponsors = `*[_type == "sponsors"] {
@@ -86,4 +87,11 @@ export const getSocials = `*[_type == "socials"]{
   name,
   slug,
   link
+}`;
+
+export const getCounts = `*[_type == "counts"]{
+  _id,
+  title,
+  slug,
+  value
 }`;
