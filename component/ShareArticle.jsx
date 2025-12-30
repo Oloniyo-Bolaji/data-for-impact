@@ -1,11 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FacebookIcon } from "@/lib/icons/facebook";
-import LinkedInIcon from "@/lib/icons/linkedin";
-import WhatsAppIcon from "@/lib/icons/whatsapp";
-import { Link } from "lucide-react"; // you can swap Twitter with your XIcon if you prefer
-import XIcon from "@/lib/icons/x";
+import { Link } from "lucide-react"; 
+import { FacebookIcon, LinkedInIcon, WhatsAppIcon, XIcon } from "@/lib/icons";
 
 const ShareArticle = ({ title, slug }) => {
   const [url, setUrl] = useState("");

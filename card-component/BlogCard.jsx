@@ -6,7 +6,7 @@ import React, { useRef, useMemo } from "react";
 import getReadingTime from "@/lib/readTime";
 import Link from "next/link";
 
-// ✅ Extract helper outside so it’s not recreated on each render
+// Extract helper outside so it’s not recreated on each render
 const getPlainText = (blocks) =>
   blocks
     .map((block) => block.children?.map((child) => child.text).join("") || "")
@@ -15,7 +15,7 @@ const getPlainText = (blocks) =>
 const BlogCard = ({ article }) => {
   const cardRef = useRef(null);
 
-  // ✅ Memoize preview text so it doesn’t recompute unnecessarily
+  // Memoize preview text so it doesn’t recompute unnecessarily
   const previewText = useMemo(() => {
     const text = getPlainText(article.content);
     return text.length > 120 ? text.slice(0, 120) + "..." : text;
@@ -43,7 +43,7 @@ const BlogCard = ({ article }) => {
           </p>
         </div>
 
-        <h3 className="text-base font-semibold line-clamp-2">
+        <h3 className="text-base font-semibold line-clamp-2 capitalize">
           {article.title || "Untitled"}
         </h3>
 

@@ -40,12 +40,12 @@ const BlogContent = async ({ params }) => {
       <div className="flex flex-col gap-5 py-5 lg:px-[150px] sm:px-[100px] px-5">
         {/* Meta info */}
         <div className="text-sm font-medium text-blue">
-          <span>{formattedDate}</span> ·
+          <span>{formattedDate}</span> • {" "}
           <span>{getReadingTime(article.content)}</span>
         </div>
 
         {/* Title */}
-        <h1 className="mt-2 sm:text-[40px] text-[30px] text-blue lg:font-extrabold sm:font-semibold font-bold sm:leading-[46px] leading-[36px]">
+        <h1 className="mt-2 capitalize sm:text-[40px] text-[30px] text-blue lg:font-extrabold sm:font-semibold font-bold sm:leading-[46px] leading-[36px]">
           {article.title}
         </h1>
 

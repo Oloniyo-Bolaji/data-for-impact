@@ -1,11 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import { quickLinks } from "@/lib/data";
-import LinkedInIcon from "@/lib/icons/linkedin";
-import { FacebookIcon } from "@/lib/icons/facebook";
-import XIcon from "@/lib/icons/x";
 import { getSocials } from "@/src/sanity/queries";
 import { client } from "@/src/sanity/client";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TikTokIcon,
+  XIcon,
+} from "@/lib/icons";
 
 const options = { next: { revalidate: 30 } };
 
@@ -13,13 +17,16 @@ const Footer = async () => {
   const socials = await client.fetch(getSocials, {}, options);
 
   const getIcon = (value) => {
-    if (value === "LinkedIn") {
-      return <LinkedInIcon size={20} color="#0A66C2" />;
-    } else if (value === "X") {
-      return <XIcon size={20} color="#000000" />;
-    } else {
-      return <FacebookIcon size={20} color="#1877F2" />;
-    }
+    const iconSize = 20;
+    const icons = {
+      LinkedIn: <LinkedInIcon size={iconSize} color="#0A66C2" />,
+      X: <XIcon size={iconSize} color="#000000" />,
+      Facebook: <FacebookIcon size={iconSize} />,
+      TikTok: <TikTokIcon size={iconSize} color="#000000" />,
+      Instagram: <InstagramIcon size={iconSize} />,
+    };
+
+    return icons[value] || null;
   };
 
   return (
