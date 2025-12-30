@@ -1,5 +1,5 @@
+import { LinkedInIcon } from "@/lib/icons";
 import { urlFor } from "@/lib/imageBuilder";
-import LinkedInIcon from "@/lib/icons/linkedin";
 import Image from "next/image";
 import React from "react";
 
